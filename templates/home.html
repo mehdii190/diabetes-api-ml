@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body{
+                background-image: url("{% static 'diabetesPrediction/image/pxfuel.jpg' %}");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            div {
+                color: white;
+                text-align: center;
+                width: 100%;
+            }
+            h1 {
+                background-color: #55bff1;
+                color: 'black';
+                font-family: arial, sans-serif;
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 200px;
+                width: 50%;
+                margin-left: 340px;
+                border-radius: 5px;
+            }
+            h2 {
+                color: 'black';
+                font-family: arial, sans-serif;
+                font-size: 15px;
+                font-weight: bold;
+                margin-top: 400px;
+            }
+            input[type=submit] {
+                background-color: #4dc3ff;
+                border: 2px;
+                color: white;
+                padding: 16px 32px;
+                cursor: pointer;
+                margin-top: 15px;
+                border-radius:5px;
+                font-size:14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>welcome to my page prediction diabetes system </h1>
+            <form action = "predict">
+                <input href="/predict" type = "submit", value = 'lets get started'>
+            </form>
+        </div>
+    </body>
+</html>
