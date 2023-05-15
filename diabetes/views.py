@@ -47,10 +47,10 @@ def result(request):
     
     result2 = ''
     if pred==[1]:
-        result2="Positive"
+        result2="diabetes"
     else:
-        result2="Negative"
+        result2="no diabetes"
         
         
-    return render(request, "predict.html", {"result2":result2})
+    return render(request, "result.html", {"result2":result2})
 
