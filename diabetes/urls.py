@@ -8,5 +8,5 @@ urlpatterns = [
     path('',views.home),
     path('predict/',views.predict),
     path('predict/result/',views.result),
-    
+    path('guide/',views.guide),
 ]

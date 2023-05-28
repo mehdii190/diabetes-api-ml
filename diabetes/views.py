@@ -6,6 +6,7 @@ from sklearn.linear_model import LogisticRegression
 import seaborn as sns
 from sklearn.metrics import accuracy_score
 import pandas as pd
+from sklearn.metrics import mean_squared_error
 
 
 
@@ -27,8 +28,7 @@ def result(request):
     
     x = data.drop(['Outcome'], axis = 1)
     y = data["Outcome"]
-    
-    x_train, x_test, y_train, y_test= train_test_split(x , y , test_size=0.2,random_state=1)
+    x_train, x_test, y_train, y_test= train_test_split(x , y , test_size=0.2,random_state=42)
     
     model = LogisticRegression()
     
@@ -43,7 +43,12 @@ def result(request):
     var7 = float(request.GET['n7'])
     var8 = float(request.GET['n8'])
     
-    pred = model.predict([[var1,var2,var3,var4,var5,var6,var7,var8]])
+    result22 = [var1,var2,var3,var4,var5,var6,var7,var8]
+    
+    pred = model.predict([result22])[0]
+    
+    score = np.max(model.predict_proba([result22]))*100
+    
     
     result2 = ''
     if pred==[1]:
@@ -52,5 +57,8 @@ def result(request):
         result2="no diabetes"
         
         
-    return render(request, "result.html", {"result2":result2})
+    return render(request, "result.html", {"result2":result2,"score":score})
 
+def guide(request):
+    
+    return render(request, "guide.html")

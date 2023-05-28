@@ -59,3 +59,8 @@ table {
 .Submit {
     margin-bottom: 15px;
 }
+
+.guidetext a {
+    text-decoration: none;
+    color: #212121;
+}
