@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font-family: monospace;
+    font-size: 20px;
 }
 
 div {
@@ -39,4 +40,10 @@ input[type=submit] {
     margin-top: 15px;
     border-radius: 5px;
     font-size: 14px;
+}
+
+p {
+    text-align: left;
+    color: #301111;
+    font-size: 21px;
 }

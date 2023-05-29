@@ -1,0 +1,32 @@
+body {
+    background-image: url('diabetesPrediction/image/diabetes.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: monospace;
+}
+
+form {
+    position: fixed;
+    top: 80px;
+    left: 410px;
+    width: 550px;
+    background-color: rgb(247 252 253 / 80%);
+    border-radius: 10px;
+    align-items: center;
+    padding: 2%;
+    box-shadow: 0 0 50px rgb(4 225 240 / 75%);
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h4 a {
+    text-decoration: none;
+}
