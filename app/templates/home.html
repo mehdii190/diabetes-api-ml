@@ -12,6 +12,15 @@
     </head>
     <body>
         <div>
+            {% if user.is_authenticated %}
+            <p>Welcome, {{ user.get_username }}. Thanks for logging in.</p>
+            {% else %}
+            <p>Welcome, new user. Please <a href="{% url 'login' %}">Log</a> in.</p>
+            {% endif %}
+
+            {% if user.is_authenticated %}
+            <p><a href="{% url 'logout' %}">Logout</a></p>
+            {% endif %}
             <h1>welcome to my page prediction diabetes system </h1>
             <form action = "predict">
                 <input href="/predict" type = "submit", value = 'lets get started'>

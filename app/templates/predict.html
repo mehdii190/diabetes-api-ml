@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="/static/predict.css">
     </head>
     <body>
+        {% if user.is_authenticated %}
+            <p>Welcome, {{ user.get_username }}. .</p>
+        {% endif %}
         <h2 class = "hometext">
             <a href ='/'>Home</a>
         </h2>

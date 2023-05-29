@@ -72,6 +72,9 @@
         </style>
     </head>
     <body>
+        {% if user.is_authenticated %}
+            <p>Welcome, {{ user.get_username }}. .</p>
+        {% endif %}
         <h2 class = "hometext">
             <a href ='/'>Home</a>
         </h2>
